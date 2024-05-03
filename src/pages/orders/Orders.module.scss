@@ -1,0 +1,34 @@
+.order {
+    color: #fff;
+    padding-top: 30px;
+}
+
+.orderList {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.orderList__item {
+    color: #fff;
+    height: 60px;
+    list-style-type: none;
+    border: 1px solid;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #000000;
+    a {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    img {
+        height: 50px;
+    }
+}
+
+.header {
+    font-size: 24px;
+}
