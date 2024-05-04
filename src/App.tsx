@@ -13,6 +13,8 @@ import Orders from './pages/orders/Orders';
 import { OrderList } from './pages/orders/OrderList/OrderList';
 import Dashboard from './pages/dashboard/Dashboard';
 import styles from './App.module.scss';
+import SingleAutopart from './pages/singleAutopart/SingleAutopart';
+import About from './pages/about/About';
 
 const App: FC = () => {
   const {store} = useContext(Context);
@@ -42,13 +44,14 @@ const App: FC = () => {
         <div className={styles.container}>
           <Routes>
             <Route path='/' element={<Dashboard/>}/>
-            <Route index element={<MainPage/>}/>
+            <Route index element={<Autoparts/>}/>
             <Route path='login' element={<Login/>}/>
             <Route path='autoparts' element={<Autoparts/>}/>
-            <Route path='autoparts/:id' element={<Autoparts/>}/>
+            <Route path='autoparts/:autopartId' element={<SingleAutopart/>}/>
             <Route path='orders' element={<Orders/>} />
             <Route path='orders/:clientId' element={<OrderList />} />
             <Route path='basket' element={<Basket/>} />
+            <Route path='about' element={<About/>} />
             <Route path='*' element={<Page404/>}/>
           </Routes>
         </div>
