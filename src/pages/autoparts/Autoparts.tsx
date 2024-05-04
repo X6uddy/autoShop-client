@@ -3,9 +3,13 @@ import toast from "react-hot-toast";
 
 import { AutopartsResponse } from "../../models/response/AutopartsResponse";
 import AutopartService from "../../services/AutopartsService";
-import { Link } from "react-router-dom";
 
-export default function Autoparts() {
+import styles from './Autoparts.module.scss';
+import { CardItem } from "../../components/cardItem/CardItem";
+import { observer } from "mobx-react-lite";
+
+
+export function Autoparts() {
     const [autoparts, setAutoparts] = useState<AutopartsResponse[]>([])
     useEffect(() => {
         const fetchAutoparts = async () => {
@@ -22,18 +26,12 @@ export default function Autoparts() {
         fetchAutoparts();
     }, [])
     return (
-        <ul>
+        <ul className={styles.list}>
             {autoparts.map((part, i) => (
-                <li key={i}>
-                    <Link to={`autoparts/:${part.autopartId}`}>
-                        <div>
-                            <div><span>Название: </span>{part.title}</div>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </Link>
-                </li>
+                <CardItem key={i} part={part}/>
             ))}
         </ul>
     )
 }
+
+export default observer(Autoparts)
