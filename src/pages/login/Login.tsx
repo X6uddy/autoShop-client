@@ -28,14 +28,16 @@ const Login: FC = () => {
                 alignItems: 'center',
                 }}
             >
-                <Box component="div" sx={{ mt: 1 }}>
+                <Box component="div" sx={{ mt: 1}}>
                     <TextField
                         margin="normal"
                         required
                         fullWidth
                         id="email"
+                        variant="outlined" 
                         label="Email Address"
                         onChange={e => setEmail(e.target.value)}
+                        color={'secondary'}
                     />
                     <TextField
                         margin="normal"
@@ -44,6 +46,7 @@ const Login: FC = () => {
                         label="Password"
                         type="password"
                         id="password"
+                        variant="outlined" 
                         onChange={e => setPassword(e.target.value)}
                     />
                     <Box
