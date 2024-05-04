@@ -1,0 +1,26 @@
+.autopart__photo {
+    height: 300px;
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.autopart_box {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+.info {
+    padding: 15px;
+    color: #fff;
+    span {
+        color: rgba(199, 199, 199, 0.664);
+        font-weight: 500;
+        font-size: 20px;
+    }
+    div {
+        font-size: 22px;
+    }
+}
