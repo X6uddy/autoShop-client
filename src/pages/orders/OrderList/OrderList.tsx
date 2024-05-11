@@ -31,7 +31,7 @@ export function OrderList() {
             }
         }
         fetchOrdersById();
-    }, [])
+    }, [clientId])
     console.log(orders)
     if(orders.length < 1) {
         return (
