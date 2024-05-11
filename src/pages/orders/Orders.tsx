@@ -44,7 +44,7 @@ export default function Orders() {
             <ul className={styles.orderList}>
                 {users.map((user, i) => (
                     <li key={i} className={styles.orderList__item}>
-                        <Link to={`/orders/${user._id}`}>
+                        <Link to={`/orders/${user.userId}`}>
                             <img src={profileImg} alt="profile image" />
                             <p> {user.email}</p>
                         </Link>
