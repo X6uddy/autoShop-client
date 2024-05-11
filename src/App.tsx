@@ -6,7 +6,6 @@ import {Context} from "./main";
 import Header from './components/header/Header';
 import Login from './pages/login/Login';
 import Page404 from './pages/404/Page404';
-import MainPage from './pages/mainPage/MainPage';
 import Autoparts from './pages/autoparts/Autoparts';
 import Basket from './pages/basket/Basket';
 import Orders from './pages/orders/Orders';
