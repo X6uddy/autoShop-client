@@ -1,0 +1,50 @@
+.basketList {
+    background-color: #8b8787;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.basketContainer {
+    width: 60%;
+}
+.list_item {
+    border: 1px solid black;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.inputName {
+    background-color: #8b8787;
+    border-radius: 5px;
+    height: 30px;
+    width: 270px;
+    border: 1px solid #cacaca;
+    color: #fff;
+    &::-webkit-input-placeholder {
+        color: white;
+    }
+    -webkit-appearance: none;
+    &:active {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+}
+.item_quantity {
+    padding: 0;
+}
+.item_changeQuantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalPrice {
+    padding: 20px;
+    width: 40%;
+    border: 1px solid black;
+}
