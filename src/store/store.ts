@@ -36,6 +36,7 @@ export default class Store {
             toast.success('Вы успешно вошли в систему!')
         } catch (e) {
             console.log(e);
+            // @ts-ignore   
             toast.error(`${e.response?.data?.message}`);
         }
     }
@@ -50,6 +51,7 @@ export default class Store {
             toast.success('Вы успешно зарегистрированы!')
         } catch (e) {
             console.log(e);
+            // @ts-ignore
             toast.error(`${e.response?.data?.message}`);
         }
     }
@@ -63,6 +65,7 @@ export default class Store {
             toast.success('Вы успешно вышли из системы')
         } catch (e) {
             console.log(e);
+            // @ts-ignore
             toast.error(`${e.response?.data?.message}`);
         }
     }
@@ -71,12 +74,13 @@ export default class Store {
         this.setLoading(true);
         try {
             const response = await axios.get<AuthResponse>(`${API_URL}/refresh`, {withCredentials: true})
-            console.log(response);
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true);
             this.setUser(response.data.user);
+            console.log(response.data.user)
         } catch (e) {
             console.log(e);
+            // @ts-ignore
             toast.error(`${e.response?.data?.message}`);
         } finally {
             this.setLoading(false);
