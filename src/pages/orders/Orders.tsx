@@ -10,7 +10,6 @@ import profileImg from '/public/profile.png';
 
 export default function Orders() {
     const [users, setUsers] = useState<IUser[]>([]);
-    console.log(users)
 
     async function getUsers() {
         try {
