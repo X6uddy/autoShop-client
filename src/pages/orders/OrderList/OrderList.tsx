@@ -22,7 +22,6 @@ export function OrderList() {
         const fetchOrdersById = async () => {
             try {
                 const response = await OrderService.getOrdersById(clientId!);
-                console.log(response.data)
                 setOrders(response.data)
                 toast.success('Заказы пользователя найдены')
             } catch (e) {
@@ -32,7 +31,6 @@ export function OrderList() {
         }
         fetchOrdersById();
     }, [clientId])
-    console.log(orders)
     if(orders.length < 1) {
         return (
             <div style={{fontSize: '27px', color: '#fff', paddingTop: '30px'}}>
